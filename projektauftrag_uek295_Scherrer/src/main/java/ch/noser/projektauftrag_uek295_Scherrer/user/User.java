@@ -1,6 +1,6 @@
 package ch.noser.projektauftrag_uek295_Scherrer.user;
 
-import ch.noseryoung.exercise1.domain.role.Role;
+import ch.noser.projektauftrag_uek295_Scherrer.role.Role;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
