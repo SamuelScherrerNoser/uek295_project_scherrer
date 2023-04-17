@@ -9,5 +9,4 @@ public class ProjektauftragUek295ScherrerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjektauftragUek295ScherrerApplication.class, args);
 	}
-
 }
