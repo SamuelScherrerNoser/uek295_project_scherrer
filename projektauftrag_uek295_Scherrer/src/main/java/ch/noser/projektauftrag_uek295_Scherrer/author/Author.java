@@ -26,7 +26,6 @@ public class Author {
     @NotBlank(message = "Name mustn't be empty.")
     private String name;
 
-    @NotBlank(message = "Birthdate mustn't be empty.")
     private String birthdate;
 
     @Column(name = "profilePicture_URL")
