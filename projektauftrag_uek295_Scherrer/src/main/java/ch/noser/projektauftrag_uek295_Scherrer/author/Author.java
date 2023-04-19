@@ -10,24 +10,25 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Author")
+@Table(name = "author")
 public class Author {
 
     @Id
-    @NotBlank(message = "ID must be given.")
-    private Integer ID;
+    @NotNull(message = "ID mustn't be empty.")
+    private Integer id;
 
     @NotBlank(message = "Name mustn't be empty.")
     private String name;
 
     private String birthdate;
 
-    @Column(name = "profilePicture_URL")
+    @Column(name = "profilepicture_url")
     private String profilePictureURL;
 }

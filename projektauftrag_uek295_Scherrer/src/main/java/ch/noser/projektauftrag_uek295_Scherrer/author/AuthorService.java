@@ -18,13 +18,18 @@ public class AuthorService {
     }
 
     //Responses with chosen Author
-    public Author getAuthor(Integer authorId) throws ProductNotFoundException {
-        return repository.findById(authorId).orElseThrow(() -> new ProductNotFoundException("Couldn't find product with specified id"));
+    public Author getAuthor(Integer authorId) throws AuthorNotFoundException {
+        return repository.findById(authorId).orElseThrow(() -> new AuthorNotFoundException("Couldn't find product with specified id"));
     }
 
     //Responses with new, created Author
     public Author createAuthor(Author author) {
         return repository.save(author);
+    }
+
+    //Responses with updated Author
+    public void updateAuthor(int id, Author author){
+        repository.save(author);
     }
 
     //Responses with response, that Author is deleted

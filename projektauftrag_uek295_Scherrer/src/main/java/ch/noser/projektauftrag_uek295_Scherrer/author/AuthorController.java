@@ -23,26 +23,32 @@ public class AuthorController {
 
     //GET-Request (chosen Author)
     @GetMapping("/{authorId}")
-    public ResponseEntity<Author> getProduct(@PathVariable("authorId") Integer authorId) throws ProductNotFoundException {
+    public ResponseEntity<Author> readAuthor(@PathVariable("authorId") Integer authorId) throws AuthorNotFoundException {
         return ResponseEntity.ok().body(service.getAuthor(authorId));
     }
 
     //POST-Request (new Author)
     @PostMapping
-    public ResponseEntity<Author> createProduct(@Valid @RequestBody Author author) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.createAuthor(author));
+    public void createAuthor(@Valid @RequestBody Author author) {
+        service.createAuthor(author);
+    }
+
+    //PUT-Request (update)
+    @PutMapping("/{authorId}")
+    public void updateAuthor(@Valid @PathVariable("authorId") int authorId, @RequestBody Author author) {
+        service.updateAuthor(authorId, author);
     }
 
     //DELETE-Request
     @DeleteMapping("/{authorId}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void deleteProduct(@Valid @PathVariable("authorId") Integer authorId) throws ProductNotFoundException {
+    public void deleteAuthor(@Valid @PathVariable("authorId") Integer authorId) throws AuthorNotFoundException {
         service.deleteAuthor(authorId);
     }
 
     //Exceptionhandlers
-    @ExceptionHandler(ProductNotFoundException.class)
-    public ResponseEntity<String> handleNoSuchElementException(ProductNotFoundException pnfe) {
+    @ExceptionHandler(AuthorNotFoundException.class)
+    public ResponseEntity<String> handleNoSuchElementException(AuthorNotFoundException pnfe) {
         return ResponseEntity.status(404).body(pnfe.getMessage());
     }
 
