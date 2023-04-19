@@ -3,6 +3,7 @@ package ch.noser.projektauftrag_uek295_Scherrer.author;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -17,30 +18,35 @@ public class AuthorController {
 
     //GET-Request (all Authors)
     @GetMapping
+    @PreAuthorize("READ")
     public ResponseEntity<List<Author>> getAuthor() {
         return ResponseEntity.ok().body(service.getAuthors());
     }
 
     //GET-Request (chosen Author)
     @GetMapping("/{authorId}")
+    @PreAuthorize("READ")
     public ResponseEntity<Author> readAuthor(@PathVariable("authorId") Integer authorId) throws AuthorNotFoundException {
         return ResponseEntity.ok().body(service.getAuthor(authorId));
     }
 
     //POST-Request (new Author)
     @PostMapping
+    @PreAuthorize("CREATE")
     public void createAuthor(@Valid @RequestBody Author author) {
         service.createAuthor(author);
     }
 
     //PUT-Request (update)
     @PutMapping("/{authorId}")
+    @PreAuthorize("UPDATE")
     public void updateAuthor(@Valid @PathVariable("authorId") int authorId, @RequestBody Author author) {
         service.updateAuthor(authorId, author);
     }
 
     //DELETE-Request
     @DeleteMapping("/{authorId}")
+    @PreAuthorize("DELETE")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void deleteAuthor(@Valid @PathVariable("authorId") Integer authorId) throws AuthorNotFoundException {
         service.deleteAuthor(authorId);
