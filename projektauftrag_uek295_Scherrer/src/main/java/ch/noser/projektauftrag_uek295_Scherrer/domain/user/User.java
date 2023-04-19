@@ -1,6 +1,6 @@
-package ch.noser.projektauftrag_uek295_Scherrer.user;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.user;
 
-import ch.noser.projektauftrag_uek295_Scherrer.role.Role;
+import ch.noser.projektauftrag_uek295_Scherrer.domain.role.Role;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +26,4 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "user_role", referencedColumnName = "role_id")
     private Role role;
-
-
 }

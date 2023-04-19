@@ -1,6 +1,6 @@
-package ch.noser.projektauftrag_uek295_Scherrer.role;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.role;
 
-import ch.noser.projektauftrag_uek295_Scherrer.authority.Authority;
+import ch.noser.projektauftrag_uek295_Scherrer.domain.authority.Authority;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

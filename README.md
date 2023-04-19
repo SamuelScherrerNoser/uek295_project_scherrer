@@ -82,7 +82,3 @@ Falls dies nicht klappen würde, sollten Sie folgende Schritte machen:
 Die Dokumentation der Endpoints finden Sie, nachdem Sie das Programm in Intellij gestartet haben und der Docker-Container läuft auf folgendem Link:
 
 http://localhost:8080/swagger-ui/index.html oder [hier](http://localhost:8080/swagger-ui/index.html)
-
-### Postman
-
-KA IRGEND EN BANANE ANESCHRIEBE

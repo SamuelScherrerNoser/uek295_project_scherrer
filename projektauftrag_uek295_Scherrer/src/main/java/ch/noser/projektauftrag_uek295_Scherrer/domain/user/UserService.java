@@ -1,4 +1,4 @@
-package ch.noser.projektauftrag_uek295_Scherrer.user;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.user;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.GrantedAuthority;

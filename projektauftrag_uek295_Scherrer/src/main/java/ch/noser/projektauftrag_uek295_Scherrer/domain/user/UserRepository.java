@@ -1,4 +1,4 @@
-package ch.noser.projektauftrag_uek295_Scherrer.user;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

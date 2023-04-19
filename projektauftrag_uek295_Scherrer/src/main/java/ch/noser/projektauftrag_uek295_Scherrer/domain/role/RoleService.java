@@ -1,4 +1,4 @@
-package ch.noser.projektauftrag_uek295_Scherrer.role;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.role;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;

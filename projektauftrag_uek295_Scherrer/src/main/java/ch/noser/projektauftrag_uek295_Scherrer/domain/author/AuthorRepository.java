@@ -1,4 +1,4 @@
-package ch.noser.projektauftrag_uek295_Scherrer.author;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.author;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

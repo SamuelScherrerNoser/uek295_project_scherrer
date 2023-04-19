@@ -1,4 +1,4 @@
-package ch.noser.projektauftrag_uek295_Scherrer.authority;
+package ch.noser.projektauftrag_uek295_Scherrer.domain.authority;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
